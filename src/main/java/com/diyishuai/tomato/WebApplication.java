@@ -3,6 +3,7 @@ package com.diyishuai.tomato;
 import org.apache.log4j.Logger;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.util.Arrays;
 
@@ -13,6 +14,7 @@ import static org.springframework.boot.SpringApplication.run;
  * @date 16/9/21
  */
 @SpringBootApplication
+@EnableScheduling
 public class WebApplication {
     private static final Logger log = Logger.getLogger(WebApplication.class);
 
