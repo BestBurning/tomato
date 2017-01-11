@@ -1,6 +1,7 @@
 package com.diyishuai.tomato.controller;
 
 import com.diyishuai.tomato.WebApplication;
+import com.diyishuai.tomato.model.AccessToken;
 import com.diyishuai.tomato.model.Msg;
 import com.diyishuai.tomato.utils.Sha1Utils;
 import com.diyishuai.tomato.utils.XMLUtils;
@@ -73,9 +74,13 @@ public class WeChatController {
             returnMsg.setMsgType(Msg.MsgType.image);
             returnMsg.setMediaId(requestMsg.getMediaId());
         }else if (Msg.MsgType.link == requestMsg.getMsgType()){
+
         }else if (Msg.MsgType.location == requestMsg.getMsgType()){
+
         }else if (Msg.MsgType.shortvideo == requestMsg.getMsgType()){
+
         }else if (Msg.MsgType.video == requestMsg.getMsgType()){
+
         }else {
             return "success";
         }
@@ -83,4 +88,10 @@ public class WeChatController {
         return returnMsg.toString();
     }
 
+
+    @RequestMapping("/getToken")
+    @ResponseBody
+    public AccessToken getToken(){
+        return AccessToken.accessToken;
+    }
 }

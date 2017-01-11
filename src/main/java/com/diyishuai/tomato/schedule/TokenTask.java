@@ -30,7 +30,7 @@ public class TokenTask {
         try {
             Response response = client.newCall(request).execute();
             AccessToken accessToken = JSON.parseObject(response.body().string(), AccessToken.class);
-            AccessToken.ACCESS_TOKEN = accessToken.getAccess_token();
+            AccessToken.accessToken = accessToken;
         } catch (IOException e) {
             e.printStackTrace();
         }

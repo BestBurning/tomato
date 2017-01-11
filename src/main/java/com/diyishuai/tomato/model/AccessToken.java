@@ -6,7 +6,7 @@ package com.diyishuai.tomato.model;
  */
 public class AccessToken {
 
-    public static String ACCESS_TOKEN = "";
+    public static AccessToken accessToken = new AccessToken();
 
     private String access_token;
 
