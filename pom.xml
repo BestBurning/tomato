@@ -39,6 +39,12 @@
             <artifactId>okhttp</artifactId>
             <version>3.2.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.jfinal</groupId>
+            <artifactId>jfinal-weixin</artifactId>
+            <version>1.8</version>
+        </dependency>
+
     </dependencies>
 
     <build>
